@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Kanit", serif;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+@layer base {
+    :root {
+        --light-first: #172f49;
+        --light-second: #234165;
+        --light-third: #565656;
+        --light-fourth: #d4d4d4;
+        --light-fifth: #eece95;
+
+        /* Colors Dark */
+        --dark-first: #2f4157;
+        --dark-second: #577c8e;
+        --dark-third: #c7d9e5;
+        --dark-fourth: #f4efeb;
+        --dark-fifth: #ffffff;
+    }
+}
+
+.text__gradient {
+    @apply bg-gradient-to-tr from-[#234165] to-[#565656] dark:bg-gradient-to-bl dark:from-[#c7d9e5] dark:to-[#f4efeb] text-transparent bg-clip-text;
+}
+
+.active__navlink {
+    @apply px-3 border-b-2 font-semibold text-[#234165] dark:text-[#c7d9e5] dark:border-[#c7d9e5] border-[#234165];
+}
+
+.default__navlink {
+    @apply px-3;
+}
